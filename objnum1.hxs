@@ -21,7 +21,7 @@ switch(argument0)
    //xxx=(xx-44);
    //yyy=(yy+16); //Needs testing //Doesn't work, but will keep for ref
 
-   xxx=((window_app.x/(2152/global.res_xx)-(44*window_app.window_size_ratiox))
+   xxx=((window_app.x/(2152/global.res_xx))-(44*window_app.window_size_ratiox))
    yyy=window_app.y_16
    
    x=xxx;

@@ -18,8 +18,11 @@ switch(argument0)
    if window_app.window_size_y!=310 && checked=false {checked=true}
    if checked=true {check_y_len=window_app.window_size_y}
 
-   xxx=(xx-44);
-   yyy=(yy+16); //Needs testing
+   //xxx=(xx-44);
+   //yyy=(yy+16); //Needs testing //Doesn't work, but will keep for ref
+
+   xxx=((window_app.x/(2152/global.res_xx)-(44*window_app.window_size_ratiox))
+   yyy=window_app.y_16
    
    x=xxx;
    y=yyy;
@@ -27,7 +30,7 @@ switch(argument0)
    break;
 
    case 3:  //ev_draw
-   draw_rectangle_color((window_app.x-(88*window_app.window_size_ratiox)),(window_app.y+32),(window_app.x+(88*window_app.window_size_ratiox)),(window_app.y+64),c_dkgray,c_dkgray,c_dkgray,c_dkgray,true);
+   draw_rectangle_color((window_app.x-(16*window_app.window_size_ratiox)),(window_app.y+32),(window_app.x+(16*window_app.window_size_ratiox)),(window_app.y+64),c_dkgray,c_dkgray,c_dkgray,c_dkgray,true);
    draw_set_color(c_black);
    draw_set_font(Jack_output);
    draw_text_ext(x,y,"1",-1,-1);

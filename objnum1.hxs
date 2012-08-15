@@ -1,6 +1,7 @@
 switch(argument0)
  {
    case 1:  //ev_create
+   var check_y_len, checked, check2, check3;
    check_y_len=480;
    checked=false;
    object_set_mask(0,button_msk)
@@ -34,7 +35,6 @@ switch(argument0)
 
    case 4:  //ev_mouse_enter
    draw_set_color(c_yellow);
-   var check2;
    check2=false;
    if check2=false
     {
@@ -46,7 +46,6 @@ switch(argument0)
 
    case 5:  //ev_mouse_leave
    draw_set_color(c_black);
-   var check3;
    check3=false;
    if check3=false
     {

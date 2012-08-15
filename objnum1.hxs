@@ -1,0 +1,34 @@
+switch(argument0)
+ {
+   case 1:  //ev_create
+   check_y_len=480;
+   checked=false;
+   exit;
+   break;
+
+   case 2:  //ev_stepend
+   if window_app.window_size_x=305 {xx=(window_app.x/(2152 / global.res_xx))-153.5}
+   if window_app.window_size_x=1000 {xx=(window_app.x/(2152 / global.res_xx))-317}
+   if window_app.window_size_x!=305 && window_app.window_size_x!=1000 {xx=(window_app.x/(2152/global.res_xx))-(((window_app.window_size_x*(305/480))/305)*153.5)+2}
+   yy=(window_app.y/(1536/global.res_yy))+24
+
+   if window_app.window_size_y=310 {check_y_len=480} 
+   if window_app.window_size_y!=310 && checked=false {checked=true}
+   if checked=true {check_y_len=window_app.window_size_y}
+
+   xxx=(xx-44);
+   yyy=(yy+16); //Needs testing
+   
+   x=xxx;
+   y=yyy;
+   screen_refresh();
+   break;
+
+   case 3:  //ev_draw
+   draw_rectangle_color((window_app.x-(88*window_app.window_size_ratiox)),(window_app.y+32),(window_app.x+(88*window_app.window_size_ratiox)),(window_app.y+64),c_dkgray,c_dkgray,c_dkgray,c_dkgray,true);
+   draw_set_color(c_black);
+   draw_set_font(Jack_output);
+   draw_text_ext(x,y,"1",-1,-1);
+   break;
+
+ }

@@ -41,6 +41,12 @@ execute_file(working_directory+'\Hxe\Calc\objnum1.hxs',2);
 object_event_add(objnum1,ev_create,0,"
 execute_file(working_directory+'\Hxe\Calc\objnum1.hxs',1);
 ");
+object_event_add(objnum1,ev_mouse,ev_mouse_enter,"
+execute_file(working_directory+'\Hxe\Calc\objnum1.hxs',4);
+");
+object_event_add(objnum1,ev_mouse,ev_mouse_leave,"
+execute_file(working_directory+'\Hxe\Calc\objnum1.hxs',5);
+");
 instance_create(0,0,objnum1);
 with(objnum1) {window_app=global.window_app;}
 }

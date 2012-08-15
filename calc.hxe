@@ -16,6 +16,7 @@ objadd=object_add();
 objsub=object_add();
 objdivide=object_add();
 objmult=object_add();
+
 object_event_add(objcalc,ev_draw,0,"
 execute_file(working_directory+'\Hxe\Calc\objcalc.hxs',3);
 ");
@@ -27,4 +28,17 @@ execute_file(working_directory+'\Hxe\Calc\objcalc.hxs',1);
 ");
 instance_create(0,0,objcalc);
 with(objcalc) {window_app=global.window_app;}
+}
+
+object_event_add(objnum1,ev_draw,0,"
+execute_file(working_directory+'\Hxe\Calc\objnum1.hxs',3);
+");
+object_event_add(objnum1,ev_step,ev_step_end,"
+execute_file(working_directory+'\Hxe\Calc\objnum1.hxs',2);
+");
+object_event_add(objnum1,ev_create,0,"
+execute_file(working_directory+'\Hxe\Calc\objnum1.hxs',1);
+");
+instance_create(0,0,objnum1);
+with(objnum1) {window_app=global.window_app;}
 }

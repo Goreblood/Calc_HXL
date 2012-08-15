@@ -32,4 +32,6 @@ switch(argument0)
    draw_text_ext(x,y,"1",-1,-1);
    break;
 
+   case 4:  //ev_mouse_enter
+   
  }

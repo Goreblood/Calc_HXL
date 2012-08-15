@@ -33,5 +33,26 @@ switch(argument0)
    break;
 
    case 4:  //ev_mouse_enter
-   
+   draw_set_color(c_yellow);
+   var check2;
+   check2=false;
+   if check2=false
+    {
+      ChangeCursorObj.alarm[0]=1;
+      check2=true;
+    }
+   with(ChangeCursorObj) {m_nextcursor=MouseCursorObj.cursor13}
+   break;
+
+   case 5:  //ev_mouse_leave
+   draw_set_color(c_black);
+   var check3;
+   check3=false;
+   if check3=false
+    {
+      ChangeCursorObj.alarm[0]=1;
+      check3=true;
+    }
+   with(ChangeCursorObj) {m_nextcursor=MouseCursorObj.cursor7}
+   break;
  }

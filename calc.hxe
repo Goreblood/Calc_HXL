@@ -17,7 +17,7 @@ objsub=object_add();
 objdivide=object_add();
 objmult=object_add();
 
-sprite_add('button_msk.gif',0,0,0,0,1,0,0);
+button_msk=sprite_add('button_msk.gif',0,0,0,0,1,0,0);
 
 object_event_add(objcalc,ev_draw,0,"
 execute_file(working_directory+'\Hxe\Calc\objcalc.hxs',3);

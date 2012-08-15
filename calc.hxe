@@ -1,0 +1,30 @@
+{
+var quit,xx,yy;
+quit=0;
+objcalc=object_add();
+objnum1=object_add();
+objnum2=object_add();
+objnum3=object_add();
+objnum4=object_add();
+objnum5=object_add();
+objnum6=object_add();
+objnum7=object_add();
+objnum8=object_add();
+objnum9=object_add();
+objnumdec=object_add();
+objadd=object_add();
+objsub=object_add();
+objdivide=object_add();
+objmult=object_add();
+object_event_add(objcalc,ev_draw,0,"
+execute_file(working_directory+'\Hxe\Calc\objcalc.hxs',3);
+");
+object_event_add(objcalc,ev_step,ev_step_end,"
+execute_file(working_directory+'\Hxe\Calc\objcalc.hxs',2);
+");
+object_event_add(objcalc,ev_create,0,"
+execute_file(working_directory+'\Hxe\Calc\objcalc.hxs',1);
+");
+instance_create(0,0,objcalc);
+with(objcalc) {window_app=global.window_app;}
+}

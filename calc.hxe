@@ -30,7 +30,6 @@ execute_file(working_directory+'\Hxe\Calc\objcalc.hxs',1);
 ");
 instance_create(0,0,objcalc);
 with(objcalc) {window_app=global.window_app;}
-}
 
 object_event_add(objnum1,ev_draw,0,"
 execute_file(working_directory+'\Hxe\Calc\objnum1.hxs',3);

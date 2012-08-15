@@ -5,6 +5,7 @@ switch(argument0)
    check_y_len=480;
    checked=false;
    object_set_mask(0,button_msk)
+   exit;
    break;
 
    case 2:  //ev_stepend
